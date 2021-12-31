@@ -2,6 +2,9 @@ import NextNProgress from 'nextjs-progressbar'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import SEO from '../../next-seo.config'
+import { DefaultSeo } from 'next-seo'
+
 import GlobalStyles from 'styles/global'
 
 function App({ Component, pageProps }: AppProps) {
@@ -19,8 +22,8 @@ function App({ Component, pageProps }: AppProps) {
           crossOrigin=""
         />
         <meta name="theme" content="#06092B" />
-        <meta name="description" content="A simple project" />
       </Head>
+      <DefaultSeo {...SEO} />
       <GlobalStyles />
       <NextNProgress
         color="#f231a5"
